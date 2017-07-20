@@ -58,7 +58,7 @@ function final_response(res, value) {
       break
   }
 
-  if (res.authoritative !== undefined)
+  if (res.authoritative === undefined)
   {
       res.authoritative = !!soa_record
   }
