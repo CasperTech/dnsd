@@ -58,7 +58,10 @@ function final_response(res, value) {
       break
   }
 
-  res.authoritative = !! soa_record
+  if (res.authoritative !== undefined)
+  {
+      res.authoritative = !!soa_record
+  }
 
   // Add convenience for typical name resolution.
   if(questions.length == 1 && question.kind() == 'IN A') {
