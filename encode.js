@@ -204,7 +204,7 @@ State.prototype.encode = function(full_domain, position_offset, option) {
   var self = this
 
   var domain = full_domain
-  domain = domain.replace(/\.$/, '') // Strip the trailing dot.
+  domain = String(domain).replace(/\.$/, '') // Strip the trailing dot.
   position = self.position + (position_offset || 0)
 
   var body = []
